@@ -1,3 +1,4 @@
+#load libraries
 library(ggplot2)
 library(ggvis)
 library(tidyverse)
@@ -12,11 +13,16 @@ library(cowplot)
 library(knitr)
 library(corrplot)
 library(cluster)
+library(caret)
+library(factoextra)
+library(viridis)
+library(hrbrthemes)
+
 
 ########################### Data Exploration ###########################
+#read data
 rm(list = ls())
 my_data = read.csv("ingredient.csv")
-
 head(my_data)
 
 
@@ -61,11 +67,7 @@ sd(my_data$c)
 
 
 ####################### 1c##############################
-library(caret)
-library(factoextra)
-library(viridis)
-library(hrbrthemes)
-
+#read data
 data = read.csv("ingredient.csv")
 
 #Min-Max scaling
